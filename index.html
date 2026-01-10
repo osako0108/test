@@ -14,10 +14,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://images.unsplash.com">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -36,13 +37,13 @@
                 <span class="logo-icon">桜</span>
                 <span class="logo-text">SAKURA</span>
             </a>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link active">ホーム</a></li>
-                <li><a href="#about" class="nav-link">私たちについて</a></li>
-                <li><a href="#menu" class="nav-link">メニュー</a></li>
-                <li><a href="#gallery" class="nav-link">ギャラリー</a></li>
-                <li><a href="#chef" class="nav-link">シェフ</a></li>
-                <li><a href="#reservation" class="nav-link nav-cta">ご予約</a></li>
+            <ul class="nav-menu" id="nav-menu" role="menu">
+                <li role="none"><a href="#home" class="nav-link active" role="menuitem">ホーム</a></li>
+                <li role="none"><a href="#about" class="nav-link" role="menuitem">私たちについて</a></li>
+                <li role="none"><a href="#menu" class="nav-link" role="menuitem">メニュー</a></li>
+                <li role="none"><a href="#gallery" class="nav-link" role="menuitem">ギャラリー</a></li>
+                <li role="none"><a href="#chef" class="nav-link" role="menuitem">シェフ</a></li>
+                <li role="none"><a href="#reservation" class="nav-link nav-cta" role="menuitem">ご予約</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav-menu">
                 <span class="bar"></span>
@@ -55,6 +56,7 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=1920&q=80" alt="日本料理" class="hero-image" loading="eager">
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
@@ -83,14 +85,10 @@
             <div class="about-grid">
                 <div class="about-images" data-aos="fade-right">
                     <div class="about-img-main">
-                        <div class="img-placeholder" style="background: linear-gradient(135deg, #2d1810 0%, #4a2c1d 100%);">
-                            <i class="fas fa-utensils"></i>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&q=80" alt="日本料理の調理" loading="lazy">
                     </div>
                     <div class="about-img-secondary">
-                        <div class="img-placeholder" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
-                            <i class="fas fa-leaf"></i>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?w=400&q=80" alt="新鮮な食材" loading="lazy">
                     </div>
                     <div class="experience-badge">
                         <span class="exp-number">25</span>
@@ -148,22 +146,20 @@
                 <h2 class="section-title">厳選メニュー</h2>
             </div>
 
-            <div class="menu-tabs" data-aos="fade-up">
-                <button class="tab-btn active" data-tab="lunch">ランチ</button>
-                <button class="tab-btn" data-tab="dinner">ディナー</button>
-                <button class="tab-btn" data-tab="course">コース</button>
-                <button class="tab-btn" data-tab="drinks">ドリンク</button>
+            <div class="menu-tabs" data-aos="fade-up" role="tablist">
+                <button class="tab-btn active" data-tab="lunch" role="tab" aria-selected="true">ランチ</button>
+                <button class="tab-btn" data-tab="dinner" role="tab" aria-selected="false">ディナー</button>
+                <button class="tab-btn" data-tab="course" role="tab" aria-selected="false">コース</button>
+                <button class="tab-btn" data-tab="drinks" role="tab" aria-selected="false">ドリンク</button>
             </div>
 
             <div class="menu-content">
                 <!-- Lunch Menu -->
-                <div class="menu-panel active" id="lunch">
+                <div class="menu-panel active" id="lunch" role="tabpanel">
                     <div class="menu-grid">
                         <div class="menu-card" data-aos="fade-up">
                             <div class="menu-card-img">
-                                <div class="img-placeholder menu-img" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);">
-                                    <i class="fas fa-bowl-rice"></i>
-                                </div>
+                                <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&q=80" alt="特選海鮮丼" loading="lazy">
                                 <span class="menu-badge">人気</span>
                             </div>
                             <div class="menu-card-content">
@@ -177,9 +173,7 @@
                         </div>
                         <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
                             <div class="menu-card-img">
-                                <div class="img-placeholder menu-img" style="background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);">
-                                    <i class="fas fa-fish"></i>
-                                </div>
+                                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=400&q=80" alt="焼き魚定食" loading="lazy">
                             </div>
                             <div class="menu-card-content">
                                 <h3>焼き魚定食</h3>
@@ -192,9 +186,7 @@
                         </div>
                         <div class="menu-card" data-aos="fade-up" data-aos-delay="200">
                             <div class="menu-card-img">
-                                <div class="img-placeholder menu-img" style="background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%);">
-                                    <i class="fas fa-seedling"></i>
-                                </div>
+                                <img src="https://images.unsplash.com/photo-1581781870027-04212e231e96?w=400&q=80" alt="季節の天ぷら御膳" loading="lazy">
                                 <span class="menu-badge new">新作</span>
                             </div>
                             <div class="menu-card-content">
@@ -208,9 +200,7 @@
                         </div>
                         <div class="menu-card" data-aos="fade-up" data-aos-delay="300">
                             <div class="menu-card-img">
-                                <div class="img-placeholder menu-img" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                                    <i class="fas fa-fire"></i>
-                                </div>
+                                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80" alt="和牛すき焼き膳" loading="lazy">
                             </div>
                             <div class="menu-card-content">
                                 <h3>和牛すき焼き膳</h3>
@@ -225,13 +215,11 @@
                 </div>
 
                 <!-- Dinner Menu -->
-                <div class="menu-panel" id="dinner">
+                <div class="menu-panel" id="dinner" role="tabpanel">
                     <div class="menu-grid">
                         <div class="menu-card" data-aos="fade-up">
                             <div class="menu-card-img">
-                                <div class="img-placeholder menu-img" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                                    <i class="fas fa-drumstick-bite"></i>
-                                </div>
+                                <img src="https://images.unsplash.com/photo-1546833998-877b37c2e5c6?w=400&q=80" alt="黒毛和牛ステーキ" loading="lazy">
                             </div>
                             <div class="menu-card-content">
                                 <h3>黒毛和牛ステーキ</h3>
@@ -244,9 +232,7 @@
                         </div>
                         <div class="menu-card" data-aos="fade-up" data-aos-delay="100">
                             <div class="menu-card-img">
-                                <div class="img-placeholder menu-img" style="background: linear-gradient(135deg, #f5af19 0%, #f12711 100%);">
-                                    <i class="fas fa-shrimp"></i>
-                                </div>
+                                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&q=80" alt="伊勢海老の姿造り" loading="lazy">
                                 <span class="menu-badge">おすすめ</span>
                             </div>
                             <div class="menu-card-content">
@@ -258,11 +244,38 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="menu-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="menu-card-img">
+                                <img src="https://images.unsplash.com/photo-1534256958597-7fe685cbd745?w=400&q=80" alt="特選刺身盛り合わせ" loading="lazy">
+                            </div>
+                            <div class="menu-card-content">
+                                <h3>特選刺身盛り合わせ</h3>
+                                <p>本日の鮮魚を七種盛りで</p>
+                                <div class="menu-footer">
+                                    <span class="price">¥4,500</span>
+                                    <span class="calories">320kcal</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="menu-card-img">
+                                <img src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=400&q=80" alt="松茸土瓶蒸し" loading="lazy">
+                                <span class="menu-badge">季節限定</span>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3>松茸土瓶蒸し</h3>
+                                <p>香り高い国産松茸を贅沢に使用</p>
+                                <div class="menu-footer">
+                                    <span class="price">¥5,800</span>
+                                    <span class="calories">180kcal</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Course Menu -->
-                <div class="menu-panel" id="course">
+                <div class="menu-panel" id="course" role="tabpanel">
                     <div class="course-list">
                         <div class="course-card" data-aos="fade-up">
                             <div class="course-header">
@@ -316,7 +329,7 @@
                 </div>
 
                 <!-- Drinks Menu -->
-                <div class="menu-panel" id="drinks">
+                <div class="menu-panel" id="drinks" role="tabpanel">
                     <div class="drinks-grid">
                         <div class="drink-category" data-aos="fade-up">
                             <h3><i class="fas fa-wine-bottle"></i> 日本酒</h3>
@@ -380,48 +393,33 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item large" data-aos="zoom-in">
-                    <div class="img-placeholder gallery-img" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
-                        <i class="fas fa-store"></i>
-                        <span>カウンター席</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=80" alt="カウンター席" loading="lazy">
                     <div class="gallery-overlay">
-                        <i class="fas fa-expand"></i>
+                        <span>カウンター席</span>
                     </div>
                 </div>
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="img-placeholder gallery-img" style="background: linear-gradient(135deg, #2d1810 0%, #4a2c1d 100%);">
-                        <i class="fas fa-door-open"></i>
-                        <span>個室</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=400&q=80" alt="個室" loading="lazy">
                     <div class="gallery-overlay">
-                        <i class="fas fa-expand"></i>
+                        <span>個室</span>
                     </div>
                 </div>
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="img-placeholder gallery-img" style="background: linear-gradient(135deg, #0f3443 0%, #34e89e 100%);">
-                        <i class="fas fa-tree"></i>
-                        <span>庭園</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?w=400&q=80" alt="庭園" loading="lazy">
                     <div class="gallery-overlay">
-                        <i class="fas fa-expand"></i>
+                        <span>庭園</span>
                     </div>
                 </div>
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="img-placeholder gallery-img" style="background: linear-gradient(135deg, #c94b4b 0%, #4b134f 100%);">
-                        <i class="fas fa-utensils"></i>
-                        <span>料理</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1540648639573-8c848de23f0a?w=400&q=80" alt="料理" loading="lazy">
                     <div class="gallery-overlay">
-                        <i class="fas fa-expand"></i>
+                        <span>料理</span>
                     </div>
                 </div>
                 <div class="gallery-item tall" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="img-placeholder gallery-img" style="background: linear-gradient(135deg, #232526 0%, #414345 100%);">
-                        <i class="fas fa-torii-gate"></i>
-                        <span>エントランス</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80" alt="エントランス" loading="lazy">
                     <div class="gallery-overlay">
-                        <i class="fas fa-expand"></i>
+                        <span>エントランス</span>
                     </div>
                 </div>
             </div>
@@ -433,9 +431,7 @@
         <div class="container">
             <div class="chef-content">
                 <div class="chef-image" data-aos="fade-right">
-                    <div class="img-placeholder chef-img" style="background: linear-gradient(135deg, #2d1810 0%, #4a2c1d 100%);">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&q=80" alt="料理長 山田匠" loading="lazy">
                     <div class="chef-decoration"></div>
                 </div>
                 <div class="chef-info" data-aos="fade-left">
@@ -476,19 +472,19 @@
             <div class="testimonial-slider" data-aos="fade-up">
                 <div class="testimonial-track" id="testimonial-track">
                     <div class="testimonial-card">
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                        <div class="testimonial-rating" aria-label="5つ星評価">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
                         </div>
                         <p class="testimonial-text">
                             「記念日に利用しました。料理はもちろん、スタッフの方のおもてなしも素晴らしく、忘れられない夜になりました。」
                         </p>
                         <div class="testimonial-author">
                             <div class="author-avatar">
-                                <i class="fas fa-user"></i>
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="佐藤 美咲">
                             </div>
                             <div class="author-info">
                                 <span class="author-name">佐藤 美咲</span>
@@ -497,19 +493,19 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                        <div class="testimonial-rating" aria-label="5つ星評価">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
                         </div>
                         <p class="testimonial-text">
                             「海外からのお客様をお連れしましたが、大変喜んでいただけました。日本料理の素晴らしさを伝えるのに最高のお店です。」
                         </p>
                         <div class="testimonial-author">
                             <div class="author-avatar">
-                                <i class="fas fa-user"></i>
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="田中 健一">
                             </div>
                             <div class="author-info">
                                 <span class="author-name">田中 健一</span>
@@ -518,19 +514,19 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                        <div class="testimonial-rating" aria-label="5つ星評価">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
                         </div>
                         <p class="testimonial-text">
                             「ランチで訪問。この価格でこのクオリティは驚きです。特に海鮮丼は絶品でした。必ずまた来ます！」
                         </p>
                         <div class="testimonial-author">
                             <div class="author-avatar">
-                                <i class="fas fa-user"></i>
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80" alt="鈴木 太郎">
                             </div>
                             <div class="author-info">
                                 <span class="author-name">鈴木 太郎</span>
@@ -540,12 +536,12 @@
                     </div>
                 </div>
                 <div class="testimonial-nav">
-                    <button class="testimonial-btn prev" id="prev-btn">
-                        <i class="fas fa-chevron-left"></i>
+                    <button class="testimonial-btn prev" id="prev-btn" aria-label="前のレビュー">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
                     </button>
-                    <div class="testimonial-dots" id="testimonial-dots"></div>
-                    <button class="testimonial-btn next" id="next-btn">
-                        <i class="fas fa-chevron-right"></i>
+                    <div class="testimonial-dots" id="testimonial-dots" role="tablist"></div>
+                    <button class="testimonial-btn next" id="next-btn" aria-label="次のレビュー">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -555,6 +551,7 @@
     <!-- Reservation Section -->
     <section class="reservation" id="reservation">
         <div class="reservation-bg">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80" alt="" class="reservation-bg-img" loading="lazy">
             <div class="reservation-overlay"></div>
         </div>
         <div class="container">
@@ -568,45 +565,45 @@
                     </p>
                     <div class="contact-info">
                         <div class="contact-item">
-                            <i class="fas fa-phone"></i>
+                            <i class="fas fa-phone" aria-hidden="true"></i>
                             <div>
                                 <span class="contact-label">お電話</span>
                                 <a href="tel:03-1234-5678">03-1234-5678</a>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-clock"></i>
+                            <i class="fas fa-clock" aria-hidden="true"></i>
                             <div>
                                 <span class="contact-label">営業時間</span>
-                                <span>ランチ 11:30-14:00 / ディナー 17:30-22:00</span>
+                                <span>ランチ 11:30-14:00<br>ディナー 17:30-22:00</span>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-calendar-xmark"></i>
+                            <i class="fas fa-calendar-xmark" aria-hidden="true"></i>
                             <div>
                                 <span class="contact-label">定休日</span>
                                 <span>毎週月曜日</span>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-location-dot"></i>
+                            <i class="fas fa-location-dot" aria-hidden="true"></i>
                             <div>
                                 <span class="contact-label">住所</span>
-                                <span>東京都渋谷区桜丘1-2-3 SAKURAビル1F</span>
+                                <span>東京都渋谷区桜丘1-2-3<br>SAKURAビル1F</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="reservation-form-container" data-aos="fade-left">
-                    <form class="reservation-form" id="reservation-form">
+                    <form class="reservation-form" id="reservation-form" novalidate>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">お名前 <span class="required">*</span></label>
-                                <input type="text" id="name" name="name" required>
+                                <input type="text" id="name" name="name" required placeholder="山田 太郎">
                             </div>
                             <div class="form-group">
                                 <label for="phone">電話番号 <span class="required">*</span></label>
-                                <input type="tel" id="phone" name="phone" required>
+                                <input type="tel" id="phone" name="phone" required placeholder="090-1234-5678">
                             </div>
                         </div>
                         <div class="form-row">
@@ -664,7 +661,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">
                             <span>予約を確認する</span>
-                            <i class="fas fa-arrow-right"></i>
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
                         </button>
                     </form>
                 </div>
@@ -675,11 +672,16 @@
     <!-- Map Section -->
     <section class="map-section">
         <div class="map-container">
-            <div class="map-placeholder">
-                <i class="fas fa-map-marked-alt"></i>
-                <p>Google Map</p>
-                <span>渋谷駅より徒歩5分</span>
-            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479754683745!2d139.69835031525882!3d35.65858518019964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1641234567890!5m2!1sja!2sjp"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="SAKURAレストランの地図">
+            </iframe>
         </div>
     </section>
 
@@ -697,10 +699,10 @@
                         心を込めたおもてなしで、特別なひとときをお届けします。
                     </p>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-line"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="LINE"><i class="fab fa-line" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -723,9 +725,9 @@
                 </div>
                 <div class="footer-contact">
                     <h4>お問い合わせ</h4>
-                    <p><i class="fas fa-location-dot"></i> 東京都渋谷区桜丘1-2-3</p>
-                    <p><i class="fas fa-phone"></i> 03-1234-5678</p>
-                    <p><i class="fas fa-envelope"></i> info@sakura-restaurant.jp</p>
+                    <p><i class="fas fa-location-dot" aria-hidden="true"></i> 東京都渋谷区桜丘1-2-3</p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> 03-1234-5678</p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> info@sakura-restaurant.jp</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -735,8 +737,8 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" id="back-to-top">
-        <i class="fas fa-chevron-up"></i>
+    <button class="back-to-top" id="back-to-top" aria-label="ページトップへ戻る">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
     </button>
 
     <script src="js/main.js"></script>
