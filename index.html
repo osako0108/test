@@ -4,7 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="SAKURA - 伝統と革新が融合する日本料理店。厳選された旬の食材と職人の技で、至福のひとときをお届けします。渋谷駅徒歩5分。">
+    <meta name="keywords" content="日本料理,和食,渋谷,レストラン,懐石,寿司,予約,ディナー,ランチ,接待,記念日">
+    <meta name="author" content="SAKURA Japanese Restaurant">
+    <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#1a1a2e">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="restaurant">
+    <meta property="og:url" content="https://sakura-restaurant.jp/">
+    <meta property="og:title" content="SAKURA - 渋谷の日本料理店 | 伝統と革新の融合">
+    <meta property="og:description" content="厳選された旬の食材と職人の技で、至福のひとときをお届けします。ミシュラン二つ星獲得。渋谷駅徒歩5分。">
+    <meta property="og:image" content="https://sakura-restaurant.jp/images/ogp.jpg">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="SAKURA Japanese Restaurant">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://sakura-restaurant.jp/">
+    <meta name="twitter:title" content="SAKURA - 渋谷の日本料理店 | 伝統と革新の融合">
+    <meta name="twitter:description" content="厳選された旬の食材と職人の技で、至福のひとときをお届けします。ミシュラン二つ星獲得。">
+    <meta name="twitter:image" content="https://sakura-restaurant.jp/images/ogp.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sakura-restaurant.jp/">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "SAKURA Japanese Restaurant",
+        "alternateName": "日本料理 SAKURA",
+        "image": [
+            "https://sakura-restaurant.jp/images/exterior.jpg",
+            "https://sakura-restaurant.jp/images/interior.jpg",
+            "https://sakura-restaurant.jp/images/food.jpg"
+        ],
+        "url": "https://sakura-restaurant.jp/",
+        "telephone": "+81-3-1234-5678",
+        "email": "info@sakura-restaurant.jp",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "桜丘1-2-3 SAKURAビル1F",
+            "addressLocality": "渋谷区",
+            "addressRegion": "東京都",
+            "postalCode": "150-0031",
+            "addressCountry": "JP"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 35.658585,
+            "longitude": 139.701635
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "11:30",
+                "closes": "14:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "17:30",
+                "closes": "22:00"
+            }
+        ],
+        "servesCuisine": ["Japanese", "Kaiseki", "Sushi"],
+        "priceRange": "¥¥¥¥",
+        "acceptsReservations": "True",
+        "menu": "https://sakura-restaurant.jp/#menu",
+        "hasMenu": {
+            "@type": "Menu",
+            "name": "SAKURAメニュー",
+            "hasMenuSection": [
+                {
+                    "@type": "MenuSection",
+                    "name": "ランチ",
+                    "hasMenuItem": [
+                        {
+                            "@type": "MenuItem",
+                            "name": "特選海鮮丼",
+                            "description": "新鮮な刺身を贅沢に盛り付けた逸品",
+                            "offers": {
+                                "@type": "Offer",
+                                "price": "2200",
+                                "priceCurrency": "JPY"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@type": "MenuSection",
+                    "name": "コース",
+                    "hasMenuItem": [
+                        {
+                            "@type": "MenuItem",
+                            "name": "桜コース",
+                            "offers": {
+                                "@type": "Offer",
+                                "price": "8800",
+                                "priceCurrency": "JPY"
+                            }
+                        },
+                        {
+                            "@type": "MenuItem",
+                            "name": "雅コース",
+                            "offers": {
+                                "@type": "Offer",
+                                "price": "15000",
+                                "priceCurrency": "JPY"
+                            }
+                        },
+                        {
+                            "@type": "MenuItem",
+                            "name": "極みコース",
+                            "offers": {
+                                "@type": "Offer",
+                                "price": "25000",
+                                "priceCurrency": "JPY"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "256",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "award": [
+            "ミシュラン二つ星",
+            "日本料理コンペティション金賞"
+        ],
+        "founder": {
+            "@type": "Person",
+            "name": "山田 匠",
+            "jobTitle": "総料理長・オーナーシェフ"
+        },
+        "paymentAccepted": ["Cash", "Credit Card", "Electronic Money"],
+        "currenciesAccepted": "JPY",
+        "amenityFeature": [
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "個室",
+                "value": true
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "カウンター席",
+                "value": true
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "駐車場",
+                "value": false
+            }
+        ],
+        "sameAs": [
+            "https://www.instagram.com/sakura_restaurant/",
+            "https://www.facebook.com/sakurarestaurant/",
+            "https://twitter.com/sakura_rest"
+        ]
+    }
+    </script>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
